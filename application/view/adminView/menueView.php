@@ -15,13 +15,14 @@
             <div id="wrapper">
                 <header>
                     <h1>Mensa Applikation</h1>
-                    <form method="POST" action="overview.php">
+                    <form method="POST" action="../overview.php">
                         <input class="logout" type="submit" name="logout" value="Logout">
                     </form>
                 </header>
                 <div id="options">
                     &#8594; <a href="../overview.php" class="option">&Uuml;bersicht</a><br>
                     &#8594; <a href="../userView/add.php" class="option">User hinzuf&uuml;gen</a><br>
+                    &#8594; <a href="userView.php" class="option">Alle User ansehen</a><br>
                     &#8594; <a href="../menueView/add.php" class="option">Men&uuml; hinzuf&uuml;gen</a>
                 </div>
                 <div id="content">

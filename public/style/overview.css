@@ -94,3 +94,7 @@ td{
     border-left: 1px dashed black; 
     border-right: 1px dashed black;
 }
+
+.user1{
+    background-color: lightgray;
+}

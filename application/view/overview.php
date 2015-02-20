@@ -21,6 +21,7 @@
                 </header>
                 <div id="options">
                     &#8594; <a href="userView/add.php" class="option">User hinzuf&uuml;gen</a><br>
+                    &#8594; <a href="adminView/userView.php" class="option">Alle User ansehen</a><br>
                     &#8594; <a href="menueView/add.php" class="option">Men&uuml; hinzuf&uuml;gen</a><br>
                     &#8594; <a href="adminView/menueView.php" class="option">Alle Men&uuml;s ansehen</a><br>
                 </div>
