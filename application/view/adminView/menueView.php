@@ -12,8 +12,8 @@
     </head>
     <body>
         <?php if (isset($_SESSION['logged'])) { ?>
-            <div id="wrapper">
-                <header>
+            <div id="wrapper"> 
+               <header>
                     <h1>Mensa Applikation</h1>
                     <form method="POST" action="../overview.php">
                         <input class="logout" type="submit" name="logout" value="Logout">
