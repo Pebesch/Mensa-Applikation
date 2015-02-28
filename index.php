@@ -7,14 +7,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style/index.css">
+        <link rel="stylesheet" type="text/css" href="public/style/index.css">
         <title>Mensa Applikation</title>
-        <?php include '../config/connection.php'; ?>
+        <?php include 'config/connection.php'; ?>
     </head>
     <body>
         <?php 
-            include '../application/model/login.php';
-            include '../application/view/indexView/index.php'; 
+            include 'application/model/login.php';
+            include 'application/view/indexView/index.php'; 
         ?> 
     </body>
 </html>

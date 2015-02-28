@@ -60,7 +60,7 @@
                                 <td><?php echo $formDate ?></td>
                                 <td class="cont"><?php echo $r['bewertung'] ?></td>
                                 <td>Edit</td>
-                                <td class="cont">X</td>
+                                <td class="cont"><a href='../menueView/delete.php?del=<?php echo $r['id'] ?>'>L&ouml;schen</a></td>
                             <?php } ?> 
                         </tr>
                     </table>
@@ -76,7 +76,7 @@
                 </footer>
             </div>
         <?php } else { ?>
-            <h1>Bitte <a href="../../public/index.php">einloggen</a> oder den <a href="mailto:pebs@gmx.ch">Administrator</a> kontaktieren.</h1>
+            <h1>Bitte <a href="../../index.php">einloggen</a> oder den <a href="mailto:pebs@gmx.ch">Administrator</a> kontaktieren.</h1>
         <?php } ?>
     </body>
 </html>

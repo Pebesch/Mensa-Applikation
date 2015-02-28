@@ -70,7 +70,7 @@
                 </footer>
             </div>
         <?php } else { ?>
-            <h1>Bitte <a href="../../public/index.php">einloggen</a> oder den <a href="mailto:pebs@gmx.ch">Administrator</a> kontaktieren.</h1>
+            <h1>Bitte <a href="../../index.php">einloggen</a> oder den <a href="mailto:pebs@gmx.ch">Administrator</a> kontaktieren.</h1>
         <?php } ?>
     </body>
 </html>

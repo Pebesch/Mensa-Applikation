@@ -23,7 +23,7 @@ function login($username, $passwort) {
     $num = $result->fetchColumn();
     if ($num > 0) {
         $_SESSION['logged'] = true;
-        header("location:../application/view/overview.php");
+        header("location:application/view/overview.php");
     } else {
         return $error = "Ung&uuml;ltige Kombination von Benutzername und Passwort.";
     }
