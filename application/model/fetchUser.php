@@ -1,5 +1,6 @@
 <?php
-$userid = strip_tags(filter_input(INPUT_GET, 'del'));
+$userid = strip_tags(filter_input(INPUT_GET, 'edit'));
+
 
 function fetchUser() {
     global $pdo;

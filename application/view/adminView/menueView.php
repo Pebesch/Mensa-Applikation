@@ -59,7 +59,7 @@
                                 <td class="cont"><?php echo $r['content'] ?></td>
                                 <td><?php echo $formDate ?></td>
                                 <td class="cont"><?php echo $r['bewertung'] ?></td>
-                                <td>Edit</td>
+                                <td class="cont"><a href='../menueView/edit.php?edit=<?php echo $r['id'] ?>'>Bearbeiten</a></td>
                                 <td class="cont"><a href='../menueView/delete.php?del=<?php echo $r['id'] ?>'>L&ouml;schen</a></td>
                             <?php } ?> 
                         </tr>

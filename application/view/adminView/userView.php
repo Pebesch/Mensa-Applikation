@@ -53,7 +53,7 @@
                                 <tr class="user<?php echo $zeile; ?>">
                                     <td class="cont"><?php echo $r['username'] ?></td>
                                     <td class="cont"><?php echo $r['mail'] ?></td>
-                                    <td>Edit</td>
+                                    <td class="cont"><a href='../userView/edit.php?edit=<?php echo $r['id'] ?>'>Bearbeiten</a></td>
                                     <td class="cont"><a href='../userView/delete.php?del=<?php echo $r['id'] ?>'>L&ouml;schen</a></td>
                                 <?php } ?> 
                             </tr>
