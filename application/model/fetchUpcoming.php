@@ -3,8 +3,9 @@ $menueid = strip_tags(filter_input(INPUT_POST, 'del'));
 
 function fetchUpcoming($datum) {
     global $pdo;
-    $sql = "SELECT * FROM menue  WHERE DATE >= '$datum' ORDER BY DATE LIMIT 10";
+    $sql = "SELECT * FROM menue WHERE DATE >= ? ORDER BY DATE LIMIT 10";
     $q = $pdo->prepare($sql);
+    $q->bindValue(1, $datum);
     $q->execute();
     $q->setFetchMode(PDO::FETCH_ASSOC);
     return $q->fetchAll();
@@ -21,8 +22,9 @@ function fetchMenues() {
 
 function fetchSingleMenue($menueid){
     global $pdo;
-    $sql = "SELECT * FROM menue WHERE id = '$menueid'";
+    $sql = "SELECT * FROM menue WHERE id = ?";
     $q = $pdo->prepare($sql);
+    $q->bindValue(1, $menueid, PDO::PARAM_INT);
     $q->execute();
     $q->setFetchMode(PDO::FETCH_ASSOC);
     return $q->fetchAll();

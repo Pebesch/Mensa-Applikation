@@ -1,2 +1,8 @@
+# Ignore IDE and local configuration files
+nbproject/private/
 
+# Ignore composer dependencies if added later
+vendor/
+
+# Database dumps or local development files
 Mensaapp/
