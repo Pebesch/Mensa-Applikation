@@ -8,11 +8,12 @@ if (isset($_POST['login'])) {
     if (empty($username) || empty($password)) {
         $error = "Bitte Benutzername und Passwort eingeben.";
     } else {
-        login($username, $password);
+        $error = login($username, $password);
     }
 }
 
-function login($username, $passwort) {
+function login($username, $passwort)
+{
     global $pdo;
     $sql = "SELECT *  FROM `personen` WHERE `username` = ? and `passwort` = ? ";
     $result = $pdo->prepare($sql);
@@ -20,11 +21,11 @@ function login($username, $passwort) {
     $result->bindParam(2, md5($passwort . "QjAMpNhwyyZ6l2cEfPxyho9lqRjLDo"));
     $result->execute();
 
-    $num = $result->fetchColumn();
-    if ($num > 0) {
+    if ($result->rowCount() > 0) {
         $_SESSION['logged'] = true;
         header("location:application/view/overview.php");
-    } else {
-        return $error = "Ung&uuml;ltige Kombination von Benutzername und Passwort.";
+        exit;
     }
+
+    return "Ung&uuml;ltige Kombination von Benutzername und Passwort.";
 }
