@@ -14,14 +14,13 @@ if (isset($_POST['login'])) {
 
 function login($username, $passwort) {
     global $pdo;
-    $sql = "SELECT *  FROM `personen` WHERE `username` = ? and `passwort` = ? ";
+    $sql = "SELECT passwort FROM personen WHERE username = ?";
     $result = $pdo->prepare($sql);
     $result->bindParam(1, $username);
-    $result->bindParam(2, md5($passwort . "QjAMpNhwyyZ6l2cEfPxyho9lqRjLDo"));
     $result->execute();
+    $hash = $result->fetchColumn();
 
-    $num = $result->fetchColumn();
-    if ($num > 0) {
+    if ($hash && password_verify($passwort, $hash)) {
         $_SESSION['logged'] = true;
         header("location:application/view/overview.php");
     } else {

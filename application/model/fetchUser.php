@@ -13,8 +13,9 @@ function fetchUser() {
 
 function fetchSingleUser($userid) {
     global $pdo;
-    $sql = "SELECT * FROM personen WHERE id = '$userid'";
+    $sql = "SELECT * FROM personen WHERE id = ?";
     $q = $pdo->prepare($sql);
+    $q->bindValue(1, $userid, PDO::PARAM_INT);
     $q->execute();
     $q->setFetchMode(PDO::FETCH_ASSOC);
     return $q->fetchAll();

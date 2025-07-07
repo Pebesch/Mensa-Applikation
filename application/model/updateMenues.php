@@ -18,10 +18,11 @@ function changeOrder($date) {
 
 function updateMenue($menue_id, $type, $content, $date){
     global $pdo;
-    $query = $pdo->prepare("UPDATE `menue` SET `type`=?, `content`=?, `date`=? WHERE id='$menue_id'");
+    $query = $pdo->prepare("UPDATE menue SET type = ?, content = ?, date = ? WHERE id = ?");
     $query->bindValue(1, $type);
     $query->bindValue(2, $content);
     $query->bindValue(3, $date);
+    $query->bindValue(4, $menue_id, PDO::PARAM_INT);
     $query->execute();
     header("Location: success.php");
 }
